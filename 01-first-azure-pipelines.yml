@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  mahdi
+  vmImage: mahdi
 
 steps:
 - script: echo Hello, world!
