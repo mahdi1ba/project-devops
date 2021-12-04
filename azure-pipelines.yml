@@ -27,5 +27,5 @@ jobs:
 - job: Job3
   dependsOn:Job2
   steps:
-    - script: echo Job3!
-      displayName: 'run a one-line script'
+  - script: echo Job3!
+    displayName: 'run a one-line script'
