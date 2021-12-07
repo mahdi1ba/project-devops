@@ -19,7 +19,7 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'mahdi-dockerhub'
-        repository: 'mahdibenayed2/project-devops'
+        repository: 'mahdibenayed1/project-devops'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
