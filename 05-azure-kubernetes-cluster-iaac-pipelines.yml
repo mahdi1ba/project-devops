@@ -20,7 +20,7 @@ steps:
     backendType: 'azurerm'
     backendServiceArm: 'azure-resource-'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'terraform-backend-rg'
+    backendAzureRmResourceGroupName: 'cloud-shell-storage-westeurope'
     backendAzureRmResourceGroupLocation: 'westeurope'
     backendAzureRmStorageAccountName: 'storageacctmahdixyz'
     backendAzureRmContainerName: 'storageacctmahdicontainer'
