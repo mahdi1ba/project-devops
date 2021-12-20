@@ -43,4 +43,4 @@ steps:
     inputs:
       command: 'destroy'
       workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
-      environmentServiceName: 'azure-resource-manager-service-connection'
+      environmentServiceName: 'azure-resource-manger-service-connection'
