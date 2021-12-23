@@ -32,7 +32,11 @@ resource "azurerm_kubernetes_cluster" "terraform-k8s" {
     client_id     = var.client_id
     client_secret = var.client_secret
   }
-
+  network_profile {
+        load_balancer_sku = "Standard"
+        network_plugin = "kubenet"
+  }
+  
   tags = {
     Environment = var.environment
   }
