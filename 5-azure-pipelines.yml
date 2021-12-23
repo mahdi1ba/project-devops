@@ -34,12 +34,6 @@ steps:
 
   - task: TerraformCLI@0
     inputs:
-      command: 'import'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
-      environmentServiceName: 'azure-resource-manger-service-connection'
-      allowTelemetryCollection: true
-  - task: TerraformCLI@0
-    inputs:
       command: 'apply'
       workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
       environmentServiceName: 'azure-resource-manger-service-connection'
