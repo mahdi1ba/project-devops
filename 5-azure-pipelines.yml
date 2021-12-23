@@ -32,14 +32,6 @@ steps:
       backendAzureRmKey: 'kubernetes-dev1.tfstate'
       allowTelemetryCollection: true
 
-
-  - task: TerraformCLI@0
-    inputs:
-      command: 'import'
-      environmentServiceName: 'azure-resource-manger-service-connection'
-      allowTelemetryCollection: true
-      resourceAddress: 'azurerm_resource_group.resource_group'
-      resourceId: '/subscriptions/ed44c9a4-fb65-4eb2-a5f8-0b72dbdbe271/resourceGroups/kubernetes_dev'
   - task: TerraformCLI@0
     inputs:
       command: 'apply'
