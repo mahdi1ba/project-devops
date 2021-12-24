@@ -2,28 +2,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: currency-exchange
-  name: currency-exchange
+    app: prediction-cout
+  name: prediction-cout
   namespace: default
 spec:
-  replicas: 1 #CHANGE
+  replicas: 2 #CHANGE
   minReadySeconds: 45
   selector:
     matchLabels:
-      app: currency-exchange
-  strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
+      app: prediction-cout
   template:
     metadata:
       labels:
-        app: currency-exchange
+        app: prediction-cout
     spec:
       containers:
-      - name: currency-exchange
-        image: in28min/currency-exchange-devops
+      - name: prediction-cout
+        image: mahdibenayed1/project-devops
         imagePullPolicy: IfNotPresent
         ports:
         - name: liveness-port
@@ -56,16 +51,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels: #PODS
-    app: currency-exchange
-  name: currency-exchange
+    app: prediction-cout
+  name: prediction-cout
   namespace: default
 spec:
-  ports:
-  - # nodePort: 30702 #CHANGE
-    port: 8000 #CHANGE
-    protocol: TCP
-    targetPort: 8000 #CHANGE
-  selector:
-    app: currency-exchange
-  sessionAffinity: None #CHANGE
   type: LoadBalancer
+  ports:
+  - protocol: TCP # nodePort: 30702 #CHANGE
+    port: 8000 #CHANGE
+    targetPort: 8000 #CHANGE 
+  selector:
+    app: prediction-cout
