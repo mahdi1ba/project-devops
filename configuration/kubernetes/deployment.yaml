@@ -19,7 +19,7 @@ spec:
       containers:
       - name: prediction-cout
         image: mahdibenayed1/project-devops
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - name: liveness-port
           containerPort: 8000
