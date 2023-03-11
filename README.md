@@ -29,9 +29,9 @@ Publish the k8s Files
 Stage 2:
 Download the k8s Files to system artifact directory
 Deploy to k8s cluster with docker image we created earlier
-```
+
 ![architecture](architecture/azure-k8s-terraform.PNG)
-```
+
 Technologies used in this project:
 -	Cloud provider: Azure
 -	CI/CD tool : Azure devops 
