@@ -29,6 +29,7 @@ $ az aks get-credentials –name (name of the k8s cluster) –resource_group (na
 -	Second pipeline (CI/CD) for deploying the application container into the cluster. 
 
 Reminder: A stage contains one or more jobs. Each job runs on an agent. A job represents an execution boundary of a set of steps. All of the steps run together on the same agent.
+
 Stage 1:
 Build docker image
 Publish the k8s Files
