@@ -1,5 +1,6 @@
 # project-devops
 Project development stages:
+
 •	Create service principal (an identity created for use with applications, hosted services, and automated tools to access Azure resources.):
 
 $ az ad create-for-rbac –role=”Contributor” –scopes=”/subscription/ID(of the subscription)”
